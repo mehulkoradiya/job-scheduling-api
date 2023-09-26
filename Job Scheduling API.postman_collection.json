@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "101d0cad-7bd1-481d-93f8-16df07b16de7",
+		"name": "Job Scheduling API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6620224"
+	},
+	"item": [
+		{
+			"name": "add User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Mehul\",\r\n    \"email\":\"mehul@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/user/addUser",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"addUser"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "mehul",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add Worker",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"m\",\r\n    \"email\":\"mehulk@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/worker/addWorker",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"worker",
+						"addWorker"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "mehul",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Workers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/worker/getWorkers",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"worker",
+						"getWorkers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add Schedule",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"workerId\":\"6512d029b81807447804210b\",\r\n    \"day\":\"Monday\",\r\n    \"startTime\":\"18:30\",\r\n    \"endTime\":\"20:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/worker/addSchedule",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"worker",
+						"addSchedule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Schedule By Worker ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"workerId\":\"6512d029b81807447804210b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/worker/getScheduleByWorkerId",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"worker",
+						"getScheduleByWorkerId"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check Worker Availability",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"workerId\":\"6512d029b81807447804210b\",\r\n    \"day\": \"Monday\",\r\n    \"requestedStartTime\":\"18:10\",\r\n    \"requestedEndTime\":\"20:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/worker/checkWorkerAvailability",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"worker",
+						"checkWorkerAvailability"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
